@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/dracula.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <style>
+    .photo {
+      display: flex;
+			max-height: 400px;
+			max-width: 400px;
+			justify-content: center;
+			margin: 0 auto;
+    }
+		.teamof3{
+			object-fit: contain;
+		}
+
+  </style>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Just Code It Team!</h1>
+          <div class="photo">
+            <img class="teamof3" data-src="images/Alex2.png" />
+            <img class="teamof3" data-src="images/Lena1.png" />
+            <img class="teamof3" data-src="images/Dani1.png" />
+          </div>
+        </section>
+        <section>
+					<h3>Highlights of Team Contributions</h3>
+				</section>
+				<section>
+					<h3>Dynamics of Team Coordination</h3>
+				</section>
+				<section>
+					<h3>Technical Framework and GitHub Practices</h3>
+				</section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
