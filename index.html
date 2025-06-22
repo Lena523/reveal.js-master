@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="dist/reset.css" />
     <link rel="stylesheet" href="dist/reveal.css" />
-    <link rel="stylesheet" href="dist/theme/dracula.css" />
+    <link rel="stylesheet" href="dist/theme/moon.css" />
 
     <!-- Theme used for syntax highlighted code -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css" />
@@ -19,36 +19,353 @@
   <style>
     .photo {
       display: flex;
-			max-height: 400px;
-			max-width: 400px;
-			justify-content: center;
-			margin: 0 auto;
+      max-height: 400px;
+      max-width: 400px;
+      justify-content: center;
+      margin: 0 auto;
     }
-		.teamof3{
-			object-fit: contain;
-		}
+    .teamof3 {
+      object-fit: contain;
+    }
+    .canban {
+      width: 40%;
+      max-width: 500px;
+      height: auto;
+      object-fit: contain;
+    }
 
+    .commit {
+      width: 60%;
+      max-width: 500px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .teamof3 {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .mosaic-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .mosaic {
+      width: 300px;
+      height: 300px;
+      display: grid;
+      grid-template-columns: repeat(5, 60px);
+      grid-template-rows: repeat(5, 60px);
+      background-size: 300px 300px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .mosaic div {
+      width: 60px;
+      height: 60px;
+      background-size: 300px 300px;
+      opacity: 0;
+      transform: scale(0.8);
+      animation: fadeInTile 0.6s ease forwards;
+    }
+
+    @keyframes fadeInTile {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
   </style>
+
   <body>
     <div class="reveal">
       <div class="slides">
-        <section>
-          <h1>Just Code It Team!</h1>
-          <div class="photo">
-            <img class="teamof3" data-src="images/Alex2.png" />
-            <img class="teamof3" data-src="images/Lena1.png" />
-            <img class="teamof3" data-src="images/Dani1.png" />
+        <section data-transition="fade">
+          <h1 style="text-align: center">Just Code It Team</h1>
+          <div class="mosaic-container">
+            <div class="mosaic" id="alex"></div>
+            <div class="mosaic" id="lena"></div>
+            <div class="mosaic" id="dani"></div>
           </div>
         </section>
-        <section>
-					<h3>Highlights of Team Contributions</h3>
-				</section>
-				<section>
-					<h3>Dynamics of Team Coordination</h3>
-				</section>
-				<section>
-					<h3>Technical Framework and GitHub Practices</h3>
-				</section>
+        <section data-transition="fade">
+          <h2>🤝 Highlights of Team Contributions</h2>
+        </section>
+        <section data-transition="convex">
+          <div style="padding-top: 50px">
+            <h3>Impact of Collaboration</h3>
+          </div>
+          <section>
+            <p class="fragment fade-in">
+              Resolved blockers through team problem-solving sessions
+            </p>
+            <p class="fragment fade-in">
+              Continuous feedback reduced technical debt and boosted quality
+            </p>
+          </section>
+        </section>
+        <section data-transition="convex">
+          <div style="padding-top: 50px">
+            <h3>Innovation Through Teamwork</h3>
+          </div>
+          <section>
+            <p class="fragment fade-in">
+              Brainstormed and built unique features
+            </p>
+            <p class="fragment fade-in">
+              Practiced pair programming to speed up feature delivery
+            </p>
+          </section>
+        </section>
+        <section data-transition="fade">
+          <h2>👥 Dynamics of Team Coordination</h2>
+        </section>
+        <section data-transition="convex">
+          <div style="padding-top: 50px">
+            <h3 class="canban-header">Usage of Kanban Board</h3>
+          </div>
+          <section>
+            <p class="fragment fade-in">
+              Clear task states improved transparency and accountability
+            </p>
+            <p class="fragment fade-in">
+              Weekly planning rituals aligned team goals
+            </p>
+          </section>
+          <section>
+            <p class="fragment fade-in" style="padding-top: 30px">
+              <img class="canban" data-src="images/canban-total.png" />
+              <br />
+              Total completed issues
+            </p>
+          </section>
+          <section>
+            <p class="fragment fade-in" style="padding-top: 30px;">
+              <img class="canban" data-src="images/canbantotal.png" />
+              <br />
+              Completed issues per each member
+            </p>
+          </section>
+        </section>
+        <section data-transition="convex">
+          <div style="padding-top: 50px">
+            <h3>Communication Within the Team</h3>
+          </div>
+          <section>
+            <p class="fragment fade-in">
+              Daily check-ins maintained team rhythm and flow
+            </p>
+            <p class="fragment fade-in">
+              Quick chat syncs resolved blockers instantly
+            </p>
+          </section>
+        </section>
+        <section data-transition="convex">
+          <div style="padding-top: 50px">
+            <h3>Approach to Task Allocation</h3>
+          </div>
+          <section>
+            <p class="fragment fade-in">
+              Assigned tasks based on strengths and growth goals
+            </p>
+            <p class="fragment fade-in">
+              Used story points to estimate effort realistically
+            </p>
+          </section>
+        </section>
+        <section data-transition="fade">
+          <h2>📈 Technical Framework and GitHub Practices</h2>
+        </section>
+        <section data-transition="convex">
+          <div style="padding-top: 50px">
+            <h3>GitHub Analytics</h3>
+          </div>
+          <section>
+            <p class="fragment fade-in">
+              Balanced activity across contributors
+            </p>
+            <p class="fragment fade-in">Spikes aligned with sprint deadlines</p>
+          </section>
+          <section>
+            <p class="fragment fade-in">
+              <img class="commit" data-src="images/gitstats.png" />
+            </p>
+          </section>
+          <section>
+            <p class="fragment fade-in">
+              <img  data-src="images/totalcommits.png" />
+            </p>
+          </section>
+          <section>
+            <p class="fragment fade-in">
+              <img class="commit" data-src="images/Alexcommits2.png" />
+            </p>
+          </section>
+          <section>
+            <p class="fragment fade-in">
+              <img class="commit" data-src="images/Danyarcommits2.png" />
+            </p>
+          </section>
+          <section>
+            <p class="fragment fade-in">
+              <img class="commit" data-src="images/Lenacommits2.png" />
+            </p>
+          </section>
+        </section>
+        <section data-transition="convex">
+          <div style="padding-top: 50px">
+            <h3>Example of a Pull Request and Associated Code Review</h3>
+          </div>
+          <section>
+            <p class="fragment fade-in">
+              Active discussion improved modularity in a key refactor
+            </p>
+            <p class="fragment fade-in">
+              Suggestions boosted readability and test coverage
+            </p>
+          </section>
+        </section>
+        <section data-transition="convex">
+          <section data-transition="zoom">
+            <h5 style="text-align: center;">🔍 Code Review Walkthrough</h5>
+            <p style="text-align: center;">Based on Pull Request #44 — <em>Customer Login</em></p>
+          </section>  
+          <section data-transition="slide">
+            <h5> Pull Request Flow</h5>
+            <ol style="font-size: 1em;">
+              <li class="fragment fade-in"> Feature branch <code>39-feature_customer_login</code> created</li>
+              <li class="fragment fade-in"> Commits added (4 total)</li>
+              <li class="fragment fade-in"> PR opened by @AleksGoodOmens → Merging into <code>sprint-2</code></li>
+              <li class="fragment fade-in"> Review requested: @Lena523, @hapurzhonau</li>
+              <li class="fragment fade-in"> Suggestions & comments exchanged (10 total)</li>
+              <li class="fragment fade-in"> Both approved → PR merged May 19</li>
+            </ol>
+          </section>
+          <section data-transition="fade">
+            <h5> Feedback Highlights</h5>
+            <blockquote class="fragment fade-in">
+              “Far-sighted solution” — <strong>@hapurzhonau</strong>
+            </blockquote>
+            <blockquote class="fragment fade-in">
+              “It's better to check the structure of default values” — <strong>@Lena523</strong>
+            </blockquote>
+            <blockquote class="fragment fade-in">
+              “Well done, thanks for work” — <strong>@Lena523</strong>
+            </blockquote>
+          </section>
+          <section data-transition="slide">
+            <div>
+              <h5 style="margin-top: 0;"> What Changed?</h5>
+              <ul style="padding-left: 20px; line-height: 1.6;">
+                <li> Login and Registration added</li>
+                <li> Token stored in <code>localStorage</code></li>
+                <li> Auto login on page refresh</li>
+                <li> 13 files changed • +295 / −221 lines</li>
+                <li> Merged on May 19 by <strong>@AleksGoodOmens</strong></li>
+              </ul>
+            </div>
+          </section>
+          <section data-transition="fade">
+            <h5> Reviewers' Involvement</h5>
+            <ul style="padding-left: 20px; font-size: 1em; line-height: 1.6;">
+              <li><strong>@hapurzhonau</strong>: Feedback on token naming + positive review</li>
+              <li><strong>@Lena523</strong>: Address structure validation + multiple inline comments</li>
+              <li> Both reviewers approved — demonstrating strong collaboration</li>
+            </ul>
+          </section>
+          
+        </section>
+        <section data-transition="convex">
+          <div style="padding-top: 50px">
+            <h3>README Documentation</h3>
+          </div>
+          <section>
+            <p class="fragment fade-in">
+              Clear local setup for fast onboarding
+            </p>
+            <p class="fragment fade-in">
+              Contribution guide with conventions ensured consistency
+            </p>
+          </section>
+          <section data-transition="fade">
+            <h4>🛍️ JUST_CODE_IT-Ecommerce</h4>
+            <p class="fragment fade-in">
+              A full-featured eCommerce web app that replicates real-world
+              shopping experiences — from discovery to checkout. Fully
+              responsive and powered by CommerceTools.
+            </p>
+          </section>
+          <section data-transition="zoom">
+            <h5>📌 Key Features</h5>
+            <ul>
+              <li class="fragment fade-in">
+                Product catalog, filtering, and search
+              </li>
+              <li class="fragment fade-in">
+                User registration, login, and profile
+              </li>
+              <li class="fragment fade-in">
+                Basket and checkout functionality
+              </li>
+              <li class="fragment fade-in">Adaptive design for all devices</li>
+            </ul>
+          </section>
+          <section data-transition="slide">
+            <h5>📄 Main Pages</h5>
+            <ul>
+              <li class="fragment fade-in">🏠 Main page</li>
+              <li class="fragment fade-in">🔎 Product detail</li>
+              <li class="fragment fade-in">🛒 Basket</li>
+              <li class="fragment fade-in">👤 User profile</li>
+              <li class="fragment fade-in">🖥️ Login and Registration</li>
+              <li class="fragment fade-in">👩‍💻 About Us</li>
+            </ul>
+          </section>
+          <section data-transition="convex">
+            <h5>🛠️ Tech Stack</h5>
+            <ul>
+              <li class="fragment fade-in">
+                React, TypeScript, SCSS, Redux Toolkit
+              </li>
+              <li class="fragment fade-in">CommerceTools API backend</li>
+              <li class="fragment fade-in">
+                CI/CD with GitHub Actions and Netlify
+              </li>
+              <li class="fragment fade-in">
+                Code checks with ESLint, Prettier, Husky
+              </li>
+              <li class="fragment fade-in">Tests with Vitest</li>
+            </ul>
+          </section>
+        </section>
+        <section data-transition="convex">
+          <div style="padding-top: 50px">
+            <h3>Overview of Technology Stack</h3>
+          </div>
+          <section>
+            <p class="fragment fade-in">
+              React + TypeScript + Commercetools for robust type-safe e-commerce
+            </p>
+            <p class="fragment fade-in">
+              Used ESLint, Prettier, media queries for clean UI and
+              responsiveness
+            </p>
+          </section>
+        </section>
+        <section data-transition="fade">
+          <h3>🎉 Thank You for Watching!</h3>
+          <p class="fragment fade-in">
+            Feel free to explore the code and try it out!
+          </p>
+          <p class="fragment fade-in">Built with ❤️ by the Just Code It team</p>
+        </section>
       </div>
     </div>
 
@@ -66,6 +383,23 @@
         // Learn about plugins: https://revealjs.com/plugins/
         plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
       });
+    </script>
+    <script>
+      function createMosaic(id, imageSrc) {
+        const grid = document.getElementById(id);
+        for (let row = 0; row < 5; row++) {
+          for (let col = 0; col < 5; col++) {
+            const tile = document.createElement("div");
+            tile.style.backgroundImage = `url(${imageSrc})`;
+            tile.style.backgroundPosition = `-${col * 60}px -${row * 60}px`;
+            tile.style.animationDelay = `${(row + col) * 100}ms`;
+            grid.appendChild(tile);
+          }
+        }
+      }
+      setTimeout(() => createMosaic("alex", "images/Alex2.png"), 200);
+      setTimeout(() => createMosaic("lena", "images/Lena1.png"), 800);
+      setTimeout(() => createMosaic("dani", "images/Dani1.png"), 1400);
     </script>
   </body>
 </html>
