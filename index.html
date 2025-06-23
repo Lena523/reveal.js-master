@@ -89,6 +89,21 @@
       animation: fadeInTile 0.6s ease forwards;
     }
 
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+
     @keyframes fadeInTile {
       to {
         opacity: 1;
@@ -242,7 +257,9 @@
             </ul>
           </section>
           <section>
-            <p style="max-height: 80vh; overflow-y: auto; text-align: center;"><img  data-src="images/readme2.jpg" /></p>
+            <p style="max-height: 80vh; overflow-y: auto; text-align: center;">
+              <img  data-src="images/readme2.jpg" />
+            </p>
           </section>
           </section>          
         </section>
@@ -275,6 +292,9 @@
         <section data-transition="convex">
             <p><img class="cat" data-src="https://ejw2r5sj348.exactdn.com/wp-content/uploads/2023/06/cat-teamwork-meme.jpg?strip=all&lossy=1&ssl=1" /></p>
         </section>
+        <section data-transition="convex">
+          <p><img class="cat" data-src="images/lazycat.jpg" /></p>
+      </section>
         <section data-transition="fade">
           <h3>🎉 Спасибо, что были с нами!</h3>
           <p>
